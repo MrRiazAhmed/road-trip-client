@@ -8,9 +8,8 @@ const MyOders = () => {
     const [orders, setOrders] = useState();
 
 
-
     useEffect(() => {
-        fetch('http://localhost:5000/myorders')
+        fetch('https://infinite-thicket-91763.herokuapp.com/myorders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -20,7 +19,7 @@ const MyOders = () => {
         const confirmation = window.confirm('Are you sure,want to delete?');
         if (confirmation) {
             console.log(id);
-            fetch(`http://localhost:5000/myorders/${id}`, {
+            fetch(`https://infinite-thicket-91763.herokuapp.com/myorders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

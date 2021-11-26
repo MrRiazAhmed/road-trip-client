@@ -9,7 +9,7 @@ const AddNewService = () => {
         console.log(data);
 
 
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://infinite-thicket-91763.herokuapp.com//services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('New Service Added!!');
@@ -18,6 +18,7 @@ const AddNewService = () => {
             })
 
     }
+    
 
     return (
         <div className="containerr">

@@ -14,7 +14,7 @@ const Details = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://infinite-thicket-91763.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setAllServices(data))
 
@@ -32,7 +32,7 @@ const Details = () => {
 
 
 
-        axios.post('http://localhost:5000/myorders', data)
+        axios.post('https://infinite-thicket-91763.herokuapp.com/myorders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Order Added to cart!');
